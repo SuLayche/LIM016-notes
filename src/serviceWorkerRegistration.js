@@ -36,9 +36,8 @@ function registerValidSW(swUrl, config) {
             } else {
               // At this point, everything has been precached.
               // It's the perfect time to display a
-              // "Content is cached for offline use." message.
+              // 'Content is cached for offline use.' message.
               console.log('Content is cached for offline use.');
-
               // Execute callback
               if (config && config.onSuccess) {
                 config.onSuccess(registration);
@@ -76,12 +75,16 @@ function checkValidServiceWorker(swUrl, config) {
       }
     })
     .catch(() => {
-      console.log('No internet connection found. App is running in offline mode.');
+      console.log(
+        'No internet connection found. App is running in offline mode.',
+      );
     });
 }
 
 const isLocalhost = Boolean(
-  window.location.hostname === 'localhost' || window.location.hostname === '[::1]' || window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/),
+  window.location.hostname === 'localhost' || window.location.hostname === '[::1]' || window.location.hostname.match(
+    /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/,
+  ),
   // [::1] is the IPv6 localhost address.
   // window.location.hostname === '[::1]' ||
   // 127.0.0.0/8 are considered localhost for IPv4.
